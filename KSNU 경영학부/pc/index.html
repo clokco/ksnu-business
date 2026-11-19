@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>국립군산대학교 경영학부 | 글로컬 비즈니스 리더의 시작</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="국립군산대학교 경영학부 홈">
+        <div class="brand-text">
+          <span class="brand-sub">국립군산대학교</span>
+          <span class="brand-main">경영학부</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="주요 메뉴">
+        <button type="button" class="nav-btn active" data-pillar-nav="features">학부 특성</button>
+        <button type="button" class="nav-btn" data-pillar-nav="curriculum">교과과정</button>
+        <button type="button" class="nav-btn" data-pillar-nav="career">진로 방향</button>
+        <button type="button" class="nav-btn" data-pillar-nav="comparison">전북권 차별점</button>
+        <button type="button" class="nav-btn" data-pillar-nav="trends">취업동향·방향</button>
+      </nav>
+
+      <button type="button" id="mobileMenuBtn" class="mobile-menu-btn" aria-label="메뉴 열기" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="mobile-drawer-grid">
+        <button type="button" class="nav-btn active" data-pillar-nav="features">01. 학부 특성</button>
+        <button type="button" class="nav-btn" data-pillar-nav="curriculum">02. 교과과정</button>
+        <button type="button" class="nav-btn" data-pillar-nav="career">03. 진로 방향</button>
+        <button type="button" class="nav-btn" data-pillar-nav="comparison">04. 전북권 차별점</button>
+        <button type="button" class="nav-btn" data-pillar-nav="trends">05. 취업동향·방향</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="top" class="hero">
+    <img
+      class="hero-bg-img"
+      src="hero.jpg"
+      alt="현대적인 경영대학 아트리움 배경"
+    />
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div>
+        <div class="hero-eyebrow">국립군산대학교 경영특성화대학 · 입시 홍보 가이드</div>
+        <h1 class="hero-title">
+          미래 경영을 설계하는<br />
+          <span class="hero-title-line"><span class="gold-accent">글로컬 비즈니스 리더</span>의 시작</span>
+        </h1>
+        <p class="hero-desc">
+          5대 핵심 경영 전공 + AI·빅데이터 융합학위(MCD) + 전국 최저 수준 국립대 등록금.
+          실무와 글로벌 감각을 갖춘 비즈니스 전문가로 성장하세요.
+        </p>
+        <div class="hero-cta-row">
+          <button type="button" id="exploreStartBtn" class="btn-primary">4대 핵심 포인트 보기 ↓</button>
+          <button type="button" id="jumpComparisonBtn" class="btn-outline">전북권 대학 비교 바로가기</button>
+          <button type="button" id="jumpTrendsBtn" class="btn-outline">2026 취업동향·방향성 보기</button>
+        </div>
+      </div>
+
+      <div class="hero-kpi-grid" aria-label="학부 핵심 지표">
+        <div class="kpi-card">
+          <div class="kpi-label">학기당 등록금</div>
+          <div class="kpi-value">165.9만 원</div>
+          <div class="kpi-sub">18년 연속 등록금 동결</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">특성화 단과대</div>
+          <div class="kpi-value">경영특성화대학</div>
+          <div class="kpi-sub">6개 경영·경제 학과 집적</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">혁신 융합학위</div>
+          <div class="kpi-value">MCD · 공유전공</div>
+          <div class="kpi-sub">36학점 모듈로 다전공 취득</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">취업 연계 지원</div>
+          <div class="kpi-value">KSNU 우선채용</div>
+          <div class="kpi-sub">서류 가산점·15학점 실습</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Pillar Interactive Command Hub -->
+  <section id="explorerHub" class="hub-section">
+    <div class="container">
+      <div class="pillar-grid" role="tablist" aria-label="경영학부 4대 소개 영역">
+        <button type="button" class="pillar-card active" role="tab" aria-selected="true" data-pillar="features">
+          <div class="pillar-top">
+            <span class="pillar-num">SECTION 01</span>
+          </div>
+          <div class="pillar-title">학부 특성</div>
+          <p class="pillar-brief">5대 전공 · 4대 전략 · 수상 실적</p>
+          <span class="pillar-indicator">클릭해서 보기 →</span>
+        </button>
+
+        <button type="button" class="pillar-card" role="tab" aria-selected="false" data-pillar="curriculum">
+          <div class="pillar-top">
+            <span class="pillar-num">SECTION 02</span>
+          </div>
+          <div class="pillar-title">교과과정</div>
+          <p class="pillar-brief">학년별 과목 · MCD · 연금 공유전공</p>
+          <span class="pillar-indicator">클릭해서 보기 →</span>
+        </button>
+
+        <button type="button" class="pillar-card" role="tab" aria-selected="false" data-pillar="career">
+          <div class="pillar-top">
+            <span class="pillar-num">SECTION 03</span>
+          </div>
+          <div class="pillar-title">진로 방향</div>
+          <p class="pillar-brief">4대 진로 트랙 · 진로 매칭 퀴즈</p>
+          <span class="pillar-indicator">클릭해서 보기 →</span>
+        </button>
+
+        <button type="button" class="pillar-card" role="tab" aria-selected="false" data-pillar="comparison">
+          <div class="pillar-top">
+            <span class="pillar-num">SECTION 04</span>
+          </div>
+          <div class="pillar-title">전북권<br />차별점</div>
+          <p class="pillar-brief">등록금 비교 차트 · 4대 강점</p>
+          <span class="pillar-indicator">클릭해서 보기 →</span>
+        </button>
+
+        <button type="button" class="pillar-card" role="tab" aria-selected="false" data-pillar="trends">
+          <div class="pillar-top">
+            <span class="pillar-num">SECTION 05</span>
+          </div>
+          <div class="pillar-title">취업동향<br />·방향</div>
+          <p class="pillar-brief">2026 채용 트렌드 · 학부 취업전략</p>
+          <span class="pillar-indicator">클릭해서 보기 →</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Interactive Stage -->
+  <main class="stage-section">
+    <div class="container">
+      <div class="stage-card">
+
+        <!-- PANEL 1: 학부 특성 -->
+        <section id="panel-features" class="panel active" aria-labelledby="title-features">
+          <div class="panel-header">
+            <div>
+              <div class="panel-kicker">01 · DEPARTMENT IDENTITY</div>
+              <h2 id="title-features" class="panel-title">국립군산대학교 경영학부<br />핵심 특성</h2>
+              <p class="panel-subtitle">
+                <strong>경영특성화대학</strong>의 중심 학부로, 4차 산업혁명과 ESG 시대를 이끌 실무형 리더를 양성합니다.
+              </p>
+            </div>
+            <a class="source-pill" href="https://www.kunsan.ac.kr/index.kunsan?menuCd=DOM_000006301008000000" target="_blank" rel="noopener noreferrer">
+              공식 학부소개 ↗
+            </a>
+          </div>
+
+          <h3 class="sub-heading">5대 핵심 전공 영역 (클릭하여 확인)</h3>
+          <div class="chip-bar" id="coreAreaChips">
+            <button type="button" class="chip-btn active" data-core="hr">인적자원관리 (HR)</button>
+            <button type="button" class="chip-btn" data-core="finance">재무관리 (Finance)</button>
+            <button type="button" class="chip-btn" data-core="mis">경영정보·빅데이터</button>
+            <button type="button" class="chip-btn" data-core="marketing">마케팅관리</button>
+            <button type="button" class="chip-btn" data-core="strategy">전략·생산운영</button>
+          </div>
+
+          <div class="core-detail-box" id="coreDetailBox">
+            <div>
+              <h4 class="core-detail-title" id="coreDetailTitle">인적자원관리 (HR)</h4>
+              <p class="core-detail-desc" id="coreDetailDesc">
+                인재 채용·육성·평가와 노사관계를 설계해 조직 경쟁력을 높이는 분야입니다.
+              </p>
+            </div>
+            <div class="core-tag-wrap" id="coreTagWrap">
+              <span class="core-tag">인적자원관리</span>
+              <span class="core-tag">고용관계</span>
+              <span class="core-tag">글로벌인사시스템</span>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">경영특성화대학 4대 전략과제 (클릭해 펼치기)</h3>
+          <div class="accordion-grid" id="featureAccordions">
+            <div class="acc-card open">
+              <button type="button" class="acc-trigger" aria-expanded="true">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">01</span>
+                  <span class="acc-title">뉴트렌드 교과과정 (AI · 빅데이터)</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                <ul class="acc-list">
+                  <li>AI·경영빅데이터 분석 등 최신 경영 교과 운영</li>
+                  <li>해외 유명 비즈니스 스쿨 사례·실습 참여형 수업</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="acc-card open">
+              <button type="button" class="acc-trigger" aria-expanded="true">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">02</span>
+                  <span class="acc-title">취업 집중 지원 &amp; 자격증 학사</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                <ul class="acc-list">
+                  <li>국가공인 자격증 교육 및 취업 특강 상시 운영</li>
+                  <li>서류 가산점·면제 혜택 <strong>KSNU 우선채용지원제도</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="acc-card">
+              <button type="button" class="acc-trigger" aria-expanded="false">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">03</span>
+                  <span class="acc-title">풍부한 장학금 · 1:1 교수 상담</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                <ul class="acc-list">
+                  <li>신입생 성적우수·교내·마일리지 장학금 혜택</li>
+                  <li>전공 교수 정기 1:1 진로 상담 및 해외 기업 탐방</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="acc-card">
+              <button type="button" class="acc-trigger" aria-expanded="false">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">04</span>
+                  <span class="acc-title">ESG 경영 &amp; 지역사회 공헌</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                <ul class="acc-list">
+                  <li>사회적경제실무 교과 및 ESG 경영 실천</li>
+                  <li>지역사회 봉사활동과 윤리적 리더십 함양</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-banner">
+            <div>
+              <h4>학부생 대외 수상 실적</h4>
+              <p>
+                <strong>2026 한국상품학회 대학생 상품기획 경진대회 '상품혁신상'</strong> 수상 — 실무 기획력 입증!
+              </p>
+            </div>
+            <a class="source-pill" href="https://www.kunsan.ac.kr/board/view.kunsan?menuCd=DOM_000000105001008000&boardId=BBS_0000021&dataSid=1382385" target="_blank" rel="noopener noreferrer">
+              수상 소식 ↗
+            </a>
+          </div>
+        </section>
+
+        <!-- PANEL 2: 교과과정 -->
+        <section id="panel-curriculum" class="panel" aria-labelledby="title-curriculum">
+          <div class="panel-header">
+            <div>
+              <div class="panel-kicker">02 · CURRICULUM &amp; CONVERGENCE</div>
+              <h2 id="title-curriculum" class="panel-title">학년별 교과과정<br />&amp; 융합학위</h2>
+              <p class="panel-subtitle">
+                1학년 기초부터 4학년 빅데이터·장기 현장실습까지 이어지는 2026학년도 전공 로드맵입니다.
+              </p>
+            </div>
+            <a class="source-pill" href="https://www.kunsan.ac.kr/index.kunsan?menuCd=DOM_000006302001000000" target="_blank" rel="noopener noreferrer">
+              공식 교과과정 ↗
+            </a>
+          </div>
+
+          <h3 class="sub-heading">학년별 주요 교과목 (학년을 클릭하세요)</h3>
+          <div class="chip-bar" id="gradeFilterBar">
+            <button type="button" class="chip-btn active" data-grade="all">전체 (1~4학년)</button>
+            <button type="button" class="chip-btn" data-grade="1">1학년 · 기초</button>
+            <button type="button" class="chip-btn" data-grade="2">2학년 · 핵심</button>
+            <button type="button" class="chip-btn" data-grade="3">3학년 · 심화</button>
+            <button type="button" class="chip-btn" data-grade="4">4학년 · 데이터/실습</button>
+          </div>
+
+          <div class="course-grid" id="courseGrid"></div>
+
+          <div class="convergence-box">
+            <div class="panel-kicker" style="color: var(--gold-400);">KSNU CONVERGENCE DEGREE</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.38rem; margin-bottom: 6px;">
+              경영학 + 미래 기술: MCD &amp; 공유전공
+            </h3>
+            <p style="font-size: 0.96rem; color: rgba(255,255,255,0.82);">
+              원하는 직무 모듈·융합전공을 결합해 <strong>2개 이상의 학사학위</strong>를 취득할 수 있습니다.
+            </p>
+
+            <div class="convergence-tabs" id="convTabs">
+              <button type="button" class="conv-btn active" data-conv="mcd">MCD 모듈형 융합학위</button>
+              <button type="button" class="conv-btn" data-conv="pension">연금관리 공유전공</button>
+              <button type="button" class="conv-btn" data-conv="bigdata">빅데이터 · 글로벌재경</button>
+            </div>
+
+            <div class="conv-detail" id="convDetail"></div>
+          </div>
+        </section>
+
+        <!-- PANEL 3: 진로 방향 -->
+        <section id="panel-career" class="panel" aria-labelledby="title-career">
+          <div class="panel-header">
+            <div>
+              <div class="panel-kicker">03 · CAREER PATHWAYS</div>
+              <h2 id="title-career" class="panel-title">졸업 후 진로 방향</h2>
+              <p class="panel-subtitle">
+                관심 분야를 클릭해 진출 직무, 추천 자격증, 학부 지원 제도를 바로 확인하세요.
+              </p>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+              <button type="button" id="careerToTrendsBtn" class="btn-primary" style="padding:10px 18px;font-size:0.9rem;">최근 취업동향 &amp; 학부 방향성 →</button>
+              <a class="source-pill" href="https://www.kunsan.ac.kr/index.kunsan?menuCd=DOM_000006306005000000" target="_blank" rel="noopener noreferrer">
+                취업정보 게시판 ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="career-layout">
+            <div class="career-nav" id="careerTabs">
+              <button type="button" class="career-tab active" data-career="corporate">
+                <div class="career-tab-title">① 대기업 · 중견 · 글로벌 기업</div>
+                <div class="career-tab-sub">전략기획 · 마케팅 · MD · 인사 · 재무</div>
+              </button>
+              <button type="button" class="career-tab" data-career="public">
+                <div class="career-tab-title">② 금융기관 · 연금/공공기관</div>
+                <div class="career-tab-sub">국민연금공단 · 시중은행 · 기금기관</div>
+              </button>
+              <button type="button" class="career-tab" data-career="license">
+                <div class="career-tab-title">③ 전문자격사 · 공무원</div>
+                <div class="career-tab-sub">CPA · 세무사 · 노무사 · 행정/통계직</div>
+              </button>
+              <button type="button" class="career-tab" data-career="startup">
+                <div class="career-tab-title">④ 벤처창업 · 대학원</div>
+                <div class="career-tab-sub">전북형 창업패키지 · 석/박사</div>
+              </button>
+            </div>
+
+            <div class="career-detail-card" id="careerDetailCard"></div>
+          </div>
+
+          <!-- Interactive Booth Mini Quiz -->
+          <div class="quiz-box">
+            <div class="quiz-header">
+              <div>
+                <h3 class="sub-heading" style="margin-bottom: 4px;">부스 체험: 나에게 맞는 경영 진로 찾기 (3문항)</h3>
+                <p style="font-size: 0.94rem; color: var(--slate-500);">
+                  3가지만 선택하면 추천 진로와 맞춤 전공 과목을 알려드려요!
+                </p>
+              </div>
+              <span class="quiz-badge" id="quizProgressBadge">질문 1 / 3</span>
+            </div>
+            <div id="quizBody"></div>
+          </div>
+        </section>
+
+        <!-- PANEL 4: 전북권역 타 대학 차별점 -->
+        <section id="panel-comparison" class="panel" aria-labelledby="title-comparison">
+          <div class="panel-header">
+            <div>
+              <div class="panel-kicker">04 · REGIONAL DIFFERENTIATION</div>
+              <h2 id="title-comparison" class="panel-title">전북권 타 대학 경영학과와의<br />차별점</h2>
+              <p class="panel-subtitle">
+                공식 공시 등록금 비교와 국립군산대학교 경영학부만의 4대 경쟁력을 한눈에 확인하세요.
+              </p>
+            </div>
+            <a class="source-pill" href="https://www.kunsan.ac.kr/board/view.kunsan?menuCd=DOM_000000105001008000&boardId=BBS_0000021&dataSid=1363868" target="_blank" rel="noopener noreferrer">
+              등록금 동결 발표 ↗
+            </a>
+          </div>
+
+          <div class="chart-wrap">
+            <h3 class="sub-heading">전북권 주요 대학 인문사회 연간 등록금 비교 (만 원)</h3>
+            <p style="font-size: 0.9rem; color: var(--slate-500); margin-bottom: 16px;">
+              국립군산대(2026년 18년 연속 동결 · 연 331.8만 원) vs 대학교육연구소 2025년 공시 기준
+            </p>
+            <div class="chart-container">
+              <canvas id="tuitionChart"></canvas>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">전북권 주요 대학 핵심 비교표</h3>
+          <div class="table-wrap">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th>대학명</th>
+                  <th>구분</th>
+                  <th>연간 등록금 (인문사회)</th>
+                  <th>주요 특징 / 국립군산대 비교 포인트</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="ksnu-row">
+                  <td>국립군산대학교</td>
+                  <td>국립</td>
+                  <td>331.8만 원 (학기당 165.9만)</td>
+                  <td>경영특성화대학 · 18년 동결 최저 학비 · MCD/연금 공유전공 · 15학점 실습</td>
+                </tr>
+                <tr>
+                  <td>전북대학교</td>
+                  <td>국립</td>
+                  <td>332.2만 원 (2025 공시)</td>
+                  <td>대규모 거점대 ↔ 군산대는 1:1 밀착 교수 상담 &amp; 유연한 36학점 MCD 강점</td>
+                </tr>
+                <tr>
+                  <td>우석대학교</td>
+                  <td>사립</td>
+                  <td>635.7만 원 (2025 공시)</td>
+                  <td>사립대 대비 군산대 연간 약 304만 원 등록금 절감</td>
+                </tr>
+                <tr>
+                  <td>원광대학교</td>
+                  <td>사립</td>
+                  <td>640.6만 원 (2025 공시)</td>
+                  <td>사립대 절반 수준 학비 + 새만금·군산 국가산단 직접 산학협력</td>
+                </tr>
+                <tr>
+                  <td>전주대학교</td>
+                  <td>사립</td>
+                  <td>653.4만 원 (2025 공시)</td>
+                  <td>4년 재학 시 사립대 대비 약 1,286만 원 이상 학비 절감</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="sub-heading">국립군산대 경영학부만의 4대 차별점 (클릭해 펼치기)</h3>
+          <div class="accordion-grid" id="diffAccordions">
+            <div class="acc-card open">
+              <button type="button" class="acc-trigger" aria-expanded="true">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">①</span>
+                  <span class="acc-title">18년 연속 동결 · 사립대 절반 학비</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                학기당 165.9만 원으로 전국 4년제 최저 수준입니다. 전북권 사립대 대비 연간 300만 원 이상 절감되며 교내·마일리지 장학금까지 풍부합니다.
+              </div>
+            </div>
+
+            <div class="acc-card open">
+              <button type="button" class="acc-trigger" aria-expanded="true">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">②</span>
+                  <span class="acc-title">경영특성화대학 + MCD·연금 공유전공</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                36학점 모듈 이수로 다전공 학위를 받는 <strong>MCD</strong>와 국민연금공단 특화 <strong>연금관리 공유전공</strong>을 자유롭게 결합할 수 있습니다.
+              </div>
+            </div>
+
+            <div class="acc-card">
+              <button type="button" class="acc-trigger" aria-expanded="false">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">③</span>
+                  <span class="acc-title">새만금 산학협력 &amp; 15학점 현장실습</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                새만금중소기업진흥원·이차전지·신재생에너지 기업과 연계하며, 4학년 <strong>현장종합실습(15학점)</strong>으로 졸업 전 실무 경력을 쌓습니다.
+              </div>
+            </div>
+
+            <div class="acc-card">
+              <button type="button" class="acc-trigger" aria-expanded="false">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">④</span>
+                  <span class="acc-title">1:1 교수 멘토링 &amp; KSNU 우선채용</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                전공 교수 정기 1:1 진로 상담, 서류 가산점·면제 혜택 <strong>KSNU 우선채용지원제도</strong>, 3년 연속 선정 <strong>전북형 창업패키지</strong>를 연계합니다.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PANEL 5: 최근 취업동향 & 경영학부 취업 방향성 -->
+        <section id="panel-trends" class="panel" aria-labelledby="title-trends">
+          <div class="panel-header">
+            <div>
+              <div class="panel-kicker">05 · 2026 HIRING TRENDS &amp; DIRECTION</div>
+              <h2 id="title-trends" class="panel-title">최근 취업동향 &amp;<br />경영학부 취업 방향성</h2>
+              <p class="panel-subtitle">
+                2026년 최신 채용 시장 변화와 이에 맞춘 국립군산대학교 경영학부의 실전 취업 전략을 확인하세요.
+              </p>
+            </div>
+            <a class="source-pill" href="https://ksa.or.kr/bbs/edu/1072/1590154/artclView.do?layout=unknown" target="_blank" rel="noopener noreferrer">
+              2026 AI 인재 리포트 ↗
+            </a>
+          </div>
+
+          <div class="trend-kpi-grid">
+            <div class="trend-kpi-card">
+              <div class="trend-kpi-num">58.9%</div>
+              <div class="trend-kpi-title">기업 최우선 수요: 데이터 분석가</div>
+              <div class="trend-kpi-sub">AI 모델 개발자(34.7%)보다 1.7배 높음 · 현업 데이터 해석 인재 선호 (한국표준협회 2026)</div>
+            </div>
+            <div class="trend-kpi-card">
+              <div class="trend-kpi-num">32.9%</div>
+              <div class="trend-kpi-title">신입 채용 1순위: 실무·현장 경험</div>
+              <div class="trend-kpi-sub">스펙·이론보다 프로젝트 경험과 협업 태도(28.0%)를 최우선 평가 (한국표준협회 2026)</div>
+            </div>
+            <div class="trend-kpi-card">
+              <div class="trend-kpi-num">43.01%</div>
+              <div class="trend-kpi-title">전북혁신도시 지역인재 채용률</div>
+              <div class="trend-kpi-sub">국민연금공단 등 12개 이전 공공기관 2025년 채용 실적 · 전국 평균(41.5%) 상회</div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">2025~2026 최근 취업동향 4대 키워드 (클릭해 펼치기)</h3>
+          <div class="accordion-grid" id="trendAccordions">
+            <div class="acc-card open">
+              <button type="button" class="acc-trigger" aria-expanded="true">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">01</span>
+                  <span class="acc-title">개발자보다 'AI·데이터 활용 경영 인재' 수요 급증</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                국내 기업 84.4%가 AI 인재를 필요로 하며, 경영·기획 직무에서도 39.6%가 AI 활용 인재를 찾고 있습니다. 전공 무관 응답도 38.6%에 달해 데이터를 읽고 의사결정하는 경영 전공자의 기회가 넓어졌습니다.
+              </div>
+            </div>
+
+            <div class="acc-card open">
+              <button type="button" class="acc-trigger" aria-expanded="true">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">02</span>
+                  <span class="acc-title">수시채용 보편화 &amp; 직무·AI 역량 검증 강화</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                기업 67%(사람인 조사)가 공채보다 직무 중심 수시채용을 확대하고 있으며, 주요 대기업도 AI 활용 역량과 실무 적합성을 직접 검증하는 추세입니다.
+              </div>
+            </div>
+
+            <div class="acc-card">
+              <button type="button" class="acc-trigger" aria-expanded="false">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">03</span>
+                  <span class="acc-title">전북혁신도시 공공기관 지역인재 채용 기회</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                국민연금공단·한국국토정보공사(LX)·한국전기안전공사 등 12개 이전 공공기관이 지역인재 합동채용설명회를 열며 도내 대학 졸업생 채용을 이어가고 있습니다.
+              </div>
+            </div>
+
+            <div class="acc-card">
+              <button type="button" class="acc-trigger" aria-expanded="false">
+                <span class="acc-trigger-left">
+                  <span class="acc-badge">04</span>
+                  <span class="acc-title">새만금 이차전지 특화단지·고용특구 인력 확대</span>
+                </span>
+                <span class="acc-chevron">▾</span>
+              </button>
+              <div class="acc-body">
+                새만금 이차전지 입주기업은 2027년까지 약 2,900여 명 채용이 전망되며, 공장·연구 인력 확대와 함께 경영지원·회계·인사·구매·마케팅 직무 수요도 함께 늘고 있습니다.
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">국립군산대학교 경영학부의 3대 취업 방향성</h3>
+          <div class="direction-grid">
+            <div class="direction-card">
+              <span class="direction-badge">방향 01 · AX 융합</span>
+              <h4 class="direction-title">데이터·AI 활용 경영 실무자</h4>
+              <p class="direction-desc">
+                <strong>경영자료처리론·경영빅데이터분석과활용</strong>과 <strong>MCD 데이터·AI 모듈</strong>을 결합해 기업이 가장 원하는 현업 데이터 분석·기획 인재로 육성합니다.
+              </p>
+            </div>
+            <div class="direction-card">
+              <span class="direction-badge">방향 02 · 실전 경험</span>
+              <h4 class="direction-title">현장실습·경진대회 중심 포트폴리오</h4>
+              <p class="direction-desc">
+                <strong>현장종합실습(15학점)</strong>, 상품기획 경진대회(2026 상품혁신상), <strong>KSNU 우선채용지원제도</strong>로 수시채용이 요구하는 실무 경험을 완성합니다.
+              </p>
+            </div>
+            <div class="direction-card">
+              <span class="direction-badge">방향 03 · 지역 특화</span>
+              <h4 class="direction-title">혁신도시 공기업 + 새만금 산단 투트랙</h4>
+              <p class="direction-desc">
+                <strong>연금관리 공유전공</strong>으로 국민연금공단·금융공기업 지역인재 채용을 공략하고, 새만금·군산 국가산단 산학협력으로 지역 핵심 기업에 진출합니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-title">국립군산대학교 경영특성화대학 경영학부</div>
+        <div class="footer-meta">
+          전북특별자치도 군산시 대학로 558 종합교육관 3층 323호<br />
+          학부사무실 063-469-4831~4832 · 입학상담 063-469-4116 (평일 09:00~18:00)
+        </div>
+        <div class="footer-actions">
+          <button type="button" id="copyPhoneBtn" class="footer-link-btn">학부 전화번호 복사</button>
+          <a class="footer-link-btn" href="https://www.kunsan.ac.kr/business/" target="_blank" rel="noopener noreferrer">경영학부 홈페이지 ↗</a>
+          <a class="footer-link-btn" href="https://www.kunsan.ac.kr/index.kunsan?menuCd=DOM_000001216001006000" target="_blank" rel="noopener noreferrer">입학처 MCD 안내 ↗</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title" style="font-size: 1.06rem; color: var(--gold-400);">공식 출처</div>
+        <div class="source-list">
+          <a href="https://www.kunsan.ac.kr/index.kunsan?menuCd=DOM_000006301008000000" target="_blank" rel="noopener noreferrer">국립군산대 경영학부 학부소개</a>
+          <a href="https://www.kunsan.ac.kr/index.kunsan?contentsSid=7337&sso=ok" target="_blank" rel="noopener noreferrer">경영특성화대학 비전·전략과제</a>
+          <a href="https://www.kunsan.ac.kr/index.kunsan?menuCd=DOM_000006302001000000" target="_blank" rel="noopener noreferrer">경영학부 2026학년도 교과과정</a>
+          <a href="https://www.kunsan.ac.kr/board/view.kunsan?menuCd=DOM_000000105001008000&boardId=BBS_0000021&dataSid=1363868" target="_blank" rel="noopener noreferrer">2026학년도 등록금 18년 연속 동결 발표</a>
+          <a href="http://khei.re.kr/post/3227" target="_blank" rel="noopener noreferrer">대학교육연구소 2025년 대학 등록금 현황</a>
+          <a href="https://ksa.or.kr/bbs/edu/1072/1590154/artclView.do?layout=unknown" target="_blank" rel="noopener noreferrer">한국표준협회 2026 기업 AI 인재 수요 트렌드 리포트</a>
+          <a href="https://www.todayan.com/news/articleView.html?idxno=632889" target="_blank" rel="noopener noreferrer">전북혁신도시 공공기관 지역인재 채용 현황 (투데이안)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
