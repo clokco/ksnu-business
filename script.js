@@ -368,11 +368,11 @@
                 label: '인문사회 연간 등록금 (만 원)',
                 data: [331.8, 332.2, 635.7, 640.6, 653.4],
                 backgroundColor: [
-                  '#c8a253',
-                  '#1d3561',
-                  '#94a3b8',
-                  '#94a3b8',
-                  '#94a3b8'
+                  '#c2ae8c',
+                  '#657691',
+                  '#b7c0cc',
+                  '#b7c0cc',
+                  '#b7c0cc'
                 ],
                 borderRadius: 8,
                 barThickness: 30
@@ -409,7 +409,7 @@
                 grid: { display: false },
                 ticks: {
                   font: { weight: '700', size: 15 },
-                  color: '#0b162c'
+                  color: '#3f4d63'
                 }
               }
             }
@@ -441,6 +441,20 @@
         if (jumpCompBtn) {
           jumpCompBtn.addEventListener('click', () => {
             setActivePillar('comparison', true);
+          });
+        }
+
+        const jumpTrendsBtn = document.getElementById('jumpTrendsBtn');
+        if (jumpTrendsBtn) {
+          jumpTrendsBtn.addEventListener('click', () => {
+            setActivePillar('trends', true);
+          });
+        }
+
+        const careerToTrendsBtn = document.getElementById('careerToTrendsBtn');
+        if (careerToTrendsBtn) {
+          careerToTrendsBtn.addEventListener('click', () => {
+            setActivePillar('trends', true);
           });
         }
 
@@ -550,7 +564,7 @@
 
         document.addEventListener('keydown', (e) => {
           if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
-          const map = { '1': 'features', '2': 'curriculum', '3': 'career', '4': 'comparison' };
+          const map = { '1': 'features', '2': 'curriculum', '3': 'career', '4': 'comparison', '5': 'trends' };
           if (map[e.key]) {
             setActivePillar(map[e.key], false);
           }
